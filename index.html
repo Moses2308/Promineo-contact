@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--CREATE NEW FORM -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col">
+          <h2>Create Contact</h2>
+          <form action="#" id="newContactForm" class="">
+            <div class="input-wrapper mb-2">
+              <label for="fullName">Full Name : </label>
+              <input type="text" id="fullName" required class="form-control" />
+            </div>
+            <div class="input-wrapper mb-2">
+              <label for="birthday">DOB : </label>
+              <input type="date" id="birthday" required class="form-control" />
+            </div>
+            <div class="input-wrapper mb-2">
+              <label for="relation">Relationship : </label>
+              <select id="relation" required class="form-control">
+                <option value="">--Select--</option>
+                <option value="family">Family</option>
+                <option value="friend">Friend</option>
+                <option value="associate">Associate</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="input-wrapper mb-2">
+              <label for="phoneNumber">Phone Number xxx-xxx-xxxx: </label>
+              <input
+                type="tel"
+                id="phoneNumber"
+                required
+                class="form-control"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Create Contact
+            </button>
+          </form>
+        </div>
+        <!-- UPDATE FORM -->
+        <div class="col">
+          <h2>Edit Contact</h2>
+          <form action="#" id="updateContactForm">
+            <div class="input-wrapper">
+              <label for="contactID">Contact ID</label>
+              <input
+                type="text"
+                id="contactID"
+                placeholder="a2f5"
+                required
+                class="form-control mb-2"
+              />
+            </div>
+            <div class="input-wrapper">
+              <label for="updateFullName">Full Name : </label>
+              <input
+                type="text"
+                id="updateFullName"
+                required
+                class="form-control mb-2"
+              />
+            </div>
+            <div class="input-wrapper">
+              <label for="updateBirthday">DOB : </label>
+              <input
+                type="date"
+                id="updateBirthday"
+                required
+                class="form-control mb-2"
+              />
+            </div>
+            <div class="input-wrapper">
+              <label for="updateRelation">Relationship : </label>
+              <select id="updateRelation" required class="form-control mb-2">
+                <option value="">--Select--</option>
+                <option value="family">Family</option>
+                <option value="friend">Friend</option>
+                <option value="associate">Associate</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="input-wrapper">
+              <label for="updatePhoneNumber">Phone Number xxx-xxx-xxxx: </label>
+              <input
+                type="tel"
+                id="updatePhoneNumber"
+                required
+                class="form-control mb-2"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              />
+            </div>
+            <button type="submit" class="btn btn-warning">Edit Contact</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- CONTACTS CONTAINER -->
+    <div id="contact-container" class="mt-5 container"></div>
+    <!-- SCRIPTS -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+#contact-container {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 0.6rem;
+  flex-wrap: wrap;
+}
